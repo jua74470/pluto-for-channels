@@ -7,7 +7,7 @@ nginx
 NGINX_ROOT=/usr/share/nginx/html
 
 get_latest_release() {
-  curl --silent "https://api.github.com/repos/maddox/pluto-for-channels/releases/latest" |
+  curl --silent "https://api.github.com/repos/jua74470/pluto-for-channels/releases/latest" |
     grep '"tag_name":' | 
     sed -E 's/.*"([^"]+)".*/\1/'
 }
@@ -22,7 +22,7 @@ do
   LAST_RAN=`date`  
   
   if [ "$CURRENT_VERSION" != "$LATEST_VERSION" ]; then
-    UPDATE_AVAILABLE="\<a href='https\:\/\/github.com\/maddox\/pluto-for-channels\/releases\/tag\/$LATEST_VERSION'\>\<span class='tag is-warning'\\>UPDATE AVAILABLE\: $LATEST_VERSION\<\/span\>\<\/a\>"
+    UPDATE_AVAILABLE="\<a href='https\:\/\/github.com\/jua74470\/pluto-for-channels\/releases\/tag\/$LATEST_VERSION'\>\<span class='tag is-warning'\\>UPDATE AVAILABLE\: $LATEST_VERSION\<\/span\>\<\/a\>"
   fi
   
   LINKED_VERSIONS=""
